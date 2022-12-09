@@ -1,0 +1,240 @@
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+body {
+  margin: 0px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 40px 1fr 1fr 0.4fr;
+  grid-template-areas:
+    "header header header"
+    ". content content"
+    "photo photo otherphoto"
+    "footer footer footer";
+}
+
+header {
+  background-color: black;
+  grid-area: header;
+  width: 100vw;
+}
+
+.loop {
+  grid-area: header;
+  position: absolute;
+  width: 1.3rem;
+  height: 1.3rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.3rem;
+  right: 1rem;
+}
+
+.menu-size {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.3rem;
+  margin-left: 1rem;
+}
+
+.menu-list {
+  display: none;
+  position: absolute;
+  width: 33vw;
+  height: 100vh;
+  background-color: rgba(00, 00, 00, 0.9);
+  color: white;
+  padding: 0.5rem;
+  left: 0px;
+  line-height: 30pt;
+  top: 24px;
+  z-index: 1;
+}
+
+li {
+  margin-left: 2.5rem;
+}
+
+#menu-toggle:checked ~ .menu-list {
+  display: block;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.photo {
+  grid-area: content;
+  height: 100vh;
+  width: 67vw;
+}
+
+.text {
+  background-color: white;
+  grid-row: 2/3;
+  grid-column: 1/2;
+}
+
+.heading {
+  margin-top: 2rem;
+  margin-left: 2rem;
+  grid-template-rows: 2/3;
+}
+
+p {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  grid-template-rows: 2/3;
+}
+
+button {
+  grid-row: 2/3;
+  grid-column: 1/2;
+  width: 8rem;
+  height: 3rem;
+  margin-top: 28rem;
+  margin-bottom: 2rem;
+  position: relative;
+  background-color: black;
+  color: white;
+  margin-left: 2rem;
+  font-size: 16pt;
+}
+
+.logo {
+  grid-area: content;
+  z-index: 1;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  width: 30px;
+  height: 30px;
+}
+
+.safariimg {
+  grid-area: photo;
+  height: 100vh;
+  width: 67vw;
+}
+
+.othersafariimg {
+  grid-area: otherphoto;
+  width: 33vw;
+  height: 100vh;
+}
+
+.secondphoto {
+  grid-area: footer;
+  width: 100vw;
+}
+
+@media screen and (min-width: 651px) and (max-width: 900px) {
+  html {
+    font-size: 13px;
+  }
+
+  body {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 40px 0.5fr 1fr 0.4fr 0.4fr;
+    grid-template-areas:
+      "header header"
+      "content content"
+      "photo photo"
+      "middlephotoone middlephototwo"
+      "bottomphoto bottomphoto";
+  }
+
+  .text {
+    grid-area: content;
+    width: 100vw;
+  }
+
+  .photo {
+    width: 100vw;
+    grid-area: photo;
+  }
+
+  .safariimg {
+    grid-area: middlephotoone;
+    height: 50vh;
+  }
+  .othersafariimg {
+    grid-area: middlephototwo;
+    height: 50vh;
+  }
+
+  .secondphoto {
+    grid-area: bottomphoto;
+  }
+
+  button {
+    grid-column: 1/2;
+    margin-top: 20rem;
+  }
+
+  .logo {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    position: relative;
+    margin-top: 21rem;
+    margin-left: 10rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  html {
+    font-size: 12px;
+  }
+
+  body {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 40px 1fr 0.7fr 0.7fr 0.4fr;
+    grid-template-areas:
+      "header header"
+      "content content"
+      "photo photo"
+      "middlephotoone middlephototwo"
+      "bottomphoto bottomphoto";
+  }
+
+  .text {
+    grid-area: content;
+    width: 100vw;
+  }
+
+  .photo {
+    width: 100vw;
+    grid-area: photo;
+    height: auto;
+  }
+
+  .safariimg {
+    grid-area: middlephotoone;
+    height: 50vh;
+  }
+  .othersafariimg {
+    grid-area: middlephototwo;
+    height: 50vh;
+  }
+
+  .secondphoto {
+    grid-area: bottomphoto;
+  }
+
+  button {
+    grid-column: 1/2;
+    margin-top: 20rem;
+  }
+
+  .logo {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    position: relative;
+    margin-top: 21rem;
+    margin-left: 8rem;
+  }
+}

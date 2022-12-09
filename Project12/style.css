@@ -1,0 +1,364 @@
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 40px 2fr 1fr 200px;
+  grid-template-areas:
+    "header header"
+    "photo otherphoto"
+    "photo thirdphoto"
+    "footer footer";
+}
+
+header {
+  background-color: black;
+  grid-area: header;
+  width: 100vw;
+}
+
+.loop {
+  grid-area: header;
+  position: absolute;
+  width: 1.3rem;
+  height: 1.3rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.3rem;
+  right: 1rem;
+}
+
+.menu-size {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.3rem;
+  margin-left: 1rem;
+}
+
+.menu-list {
+  display: none;
+  position: absolute;
+  width: 33vw;
+  height: 100vh;
+  background-color: rgba(00, 00, 00, 0.9);
+  color: white;
+  padding: 0.5rem;
+  left: 0px;
+  line-height: 30pt;
+  top: 24px;
+  z-index: 1;
+}
+
+li {
+  margin-left: 2.5rem;
+}
+
+#menu-toggle:checked ~ .menu-list {
+  display: block;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.kenya {
+  grid-area: photo;
+  height: 100.5vh;
+  width: 67vw;
+}
+
+.kayaking {
+  grid-area: otherphoto;
+  height: 67vh;
+  width: 33vw;
+}
+
+.netherlands {
+  grid-area: thirdphoto;
+  height: 33.5vh;
+  width: 33vw;
+}
+
+.globes-background {
+  background-color: dimgray;
+  grid-area: footer;
+  height: 60vh;
+  width: 100vw;
+}
+
+.header {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 400px;
+  position: absolute;
+  right: 240px;
+  top: 150px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.logo {
+  width: 100px;
+  position: absolute;
+  right: 670px;
+  top: 140px;
+}
+.search {
+  width: 35px;
+  position: absolute;
+  right: 10px;
+}
+.hamburger {
+  width: 60px;
+  position: absolute;
+  left: 10px;
+}
+
+.question {
+  grid-area: footer;
+  margin-left: 1.5rem;
+  font-size: 24px;
+  color: rgb(255, 255, 255);
+}
+
+.globes-size {
+  width: 180px;
+  height: 180px;
+}
+
+/*.globes {
+  display: flex;
+  justify-content: space-around;
+  grid-area: footer;
+  margin-top: 7%;
+}
+
+.globes-names {
+  display: flex;
+  justify-content: space-around;
+  grid-area: footer;
+  margin-top: 23%;
+  color: rgb(255, 255, 255);
+  font-size: 24px;
+  margin-left: 2%;
+}*/
+
+.globes {
+  grid-area: footer;
+  margin-top: 5rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.logo,
+.header {
+  animation: slide-in 2000ms;
+  animation-delay: 500ms;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateY(-100%);
+    opacity: 0.25;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 771px) and (max-width: 1000px) {
+  html {
+    font-size: 12px;
+  }
+
+  .logo {
+    left: 260px;
+  }
+
+  .header {
+    left: 380px;
+  }
+
+  .globes-size {
+    width: 130px;
+    height: 130px;
+  }
+
+  /*.globes {
+    display: flex;
+    justify-content: space-around;
+    grid-area: footer;
+    margin-top: 8%;
+  }
+  
+  .globes-names {
+    display: flex;
+    justify-content: space-around;
+    grid-area: footer;
+    margin-top: 22%;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    margin-left: 2%;
+  }*/
+
+  .question {
+    font-size: 20px;
+  }
+
+  .globes-background {
+    height: 45vh;
+  }
+}
+
+@media screen and (min-width: 561px) and (max-width: 770px) {
+  html {
+    font-size: 12px;
+  }
+
+  body {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 40px 2fr 1fr 0.5fr;
+    grid-template-areas:
+      "header header"
+      "photo photo"
+      "thirdphoto otherphoto"
+      "footer footer";
+  }
+
+  .kenya {
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .kayaking {
+    grid-area: otherphoto;
+    height: 50vh;
+    width: 66vw;
+  }
+
+  .netherlands {
+    grid-area: thirdphoto;
+    height: 50vh;
+    width: 34vw;
+  }
+
+  .logo {
+    width: 50px;
+    position: absolute;
+    right: 310px;
+    top: 60px;
+  }
+
+  .header {
+    right: 235px;
+    width: 200px;
+    position: absolute;
+    right: 90px;
+    top: 65px;
+  }
+
+  .question {
+    font-size: 20px;
+    margin-top: 3%;
+  }
+
+  .globes-size {
+    width: 100px;
+    height: 100px;
+  }
+
+  .globes {
+    display: flex;
+    justify-content: space-around;
+    grid-area: footer;
+    margin-top: 10%;
+  }
+
+  .globes-background {
+    height: 30vh;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  html {
+    font-size: 12px;
+  }
+
+  body {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 40px 2fr 1fr 0.5fr;
+    grid-template-areas:
+      "header header"
+      "photo photo"
+      "thirdphoto otherphoto"
+      "footer footer";
+  }
+
+  .kenya {
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .kayaking {
+    grid-area: otherphoto;
+    height: 50vh;
+    width: 66vw;
+  }
+
+  .netherlands {
+    grid-area: thirdphoto;
+    height: 50vh;
+    width: 34vw;
+  }
+
+  .logo {
+    width: 50px;
+    position: absolute;
+    right: 310px;
+    top: 60px;
+  }
+
+  .header {
+    right: 235px;
+    width: 200px;
+    position: absolute;
+    right: 90px;
+    top: 65px;
+  }
+
+  .question {
+    font-size: 14px;
+    margin-top: 3%;
+  }
+
+  .globes-size {
+    width: 60px;
+    height: 60px;
+  }
+
+  /*.globes {
+    display: flex;
+    justify-content: space-around;
+    grid-area: footer;
+    margin-top: 10%;
+  }
+
+  .globes-names {
+    display: flex;
+    justify-content: space-around;
+    grid-area: footer;
+    margin-top: 20%;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    margin-left: 2%;
+  }*/
+
+  .globes-background {
+    height: 25vh;
+  }
+}

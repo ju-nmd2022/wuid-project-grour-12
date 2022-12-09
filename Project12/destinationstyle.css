@@ -1,0 +1,1029 @@
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+}
+header {
+  background-color: black;
+  grid-area: header;
+  width: 100%;
+}
+.bigimg {
+  width: 100%;
+}
+
+/*this is the code for the arrow*/
+@-moz-keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -moz-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+@-webkit-keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -moz-transform: translateY(-15px);
+    -ms-transform: translateY(-15px);
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+
+.arrow {
+  position: relative;
+  bottom: 50px;
+  left: 50%;
+  margin-left: -20px;
+  width: 20px;
+  height: 20px;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAMAAADDpiTIAAAAMFBMVEX///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAv3aB7AAAAD3RSTlMAGNe9CgcGtbOytLe2f5VrjfCKAAADsElEQVR4AezBgQAAAACAoP2pF6kCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIDZpRvTiIEYiMLkzivb65/Xf7eBLSFkYAQzDUjwvS6rZ3N9LduekvuffFOAq/+Xs+T+pABffzhL7p8CfP3FBdQB3gXEH45S+psXEP9VgM7fvoD4rwJ0/v4FxF9TQE1IAT38YZbcPwV4+YsLGBNSQB9/mONf/XdIAZ38YR9y/xTg678KkPunAF//VYDcPwU4+IsLGDekgI7+cA+5fwow8hcUsPxTgLG/uIBxQQro6w/XEPinABd/bQHLPwUY+6sLeCEFdPeH989Hfj4poL//55ddOqgCAIQBKKT9S5vB294+GeAeA/gbwN8A/gbwN4C/AfwN4G8AfwP4G8DfAP4G8DeAvwH8DeBvAH8D+BvA3wD+BvA3gL8B/A3gbwB/A/gbwN8A/gbM9DeAvwH8DeBvAH8D+BvA3wD+BvA3gL8B/A3gbwB/A/gbwN8A/gbwN4C/AfwN4G8AfwP4G8DfAP4G8DeAvwH8DeBvAH8D+BvA3wD+BvA3gL8B/A3gbwB/A/gbwN8A/gbwN4C/AfwN4G8AfwP4G8DfAP4G8DeAvwH8DeBvAP//AfwN4G8AfwP4G8DfAP4G8DeAvwH8DeBvAH8D+BvA3wD+BvA3gL8B/A3gbwB/A/gbwN8A/gbwN4C/AfwN4G8AfwP4G8DfAP4G8DeAvwH8DeBvAH8D+BvA3wD+BvA3gL8B/A3gbwB/A/gbwN8A/gbwN4C/AfwN4G8AfwPm+hvA3wD+BvA3gL8B/A3gbwB/A/gbwN8A/gbwN4C/AfwN4G8AfwP4G8DfAP4G8DeAvwH8DeBvAH8D+BvA34Bd/gbwN4C/AfwN4G8AfwP4G8DfAP4G8DeAvwH8DeBvQMXfAP4G8DeAvwH8DeBvQNPfAP4G8Deg7G8AfwPa/gbE/Q2I+xvA3wD+BvA3gL8B/A3gbwB/A/gbwN8A/gYs8DeAvwH8DeBvAH8D+BvA3wD+BvA3gL8B/A3gbwB/A/gbwN8A/gbs9zeAvwH8DeBvAH8D+BvA3wD+BvT8DeBvAH8D+BvQ9TeAvwFtfwPi/gbwf+3BsQAAAADAIH/rYeypAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOAUHBYk13Z7LTsAAAAASUVORK5CYII=);
+  background-size: contain;
+}
+
+.bounce {
+  -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+
+.fade {
+  opacity: 0;
+  transition: 1s all ease-out;
+}
+/*it ends here*/
+
+.logo {
+  position: absolute;
+  width: 40px;
+  margin-top: 50px;
+  margin-left: 10px;
+}
+.logofooter {
+  position: relative;
+  width: 30px;
+  margin-bottom: 10px;
+}
+.discover {
+  position: absolute;
+  margin-top: 30vh;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 60px;
+  color: white;
+  text-shadow: 1px 1px 10px #000;
+  letter-spacing: 6px;
+}
+.discoverdiv {
+  display: flex;
+  justify-content: center;
+}
+/*.discover {
+  position: absolute;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 60px;
+  color: white;
+  margin-left: 27.5vw;
+  margin-top: 30vh;
+  text-shadow: 1px 1px 10px #000;
+}*/
+.loop {
+  grid-area: header;
+  position: absolute;
+  width: 1.3rem;
+  height: 1.3rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.3rem;
+  right: 1rem;
+}
+.headertext {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+  position: absolute;
+  font-size: 14px;
+  left: 55px;
+  top: 1px;
+  font-weight: lighter;
+}
+.menu-size {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.3rem;
+  margin-left: 1rem;
+}
+
+.menu-list {
+  display: none;
+  position: absolute;
+  width: 33vw;
+  height: 100vh;
+  background-color: rgba(00, 00, 00, 0.9);
+  color: white;
+  padding: 0.5rem;
+  left: 0px;
+  line-height: 30pt;
+  top: 24px;
+  z-index: 1;
+}
+
+li {
+  margin-left: 2.5rem;
+}
+
+#menu-toggle:checked ~ .menu-list {
+  display: block;
+}
+
+#menu-toggle {
+  display: none;
+}
+.Container {
+  display: grid;
+  grid-template-columns: 1fr 15fr 1fr;
+  grid-template-rows: 40px 180rem 10rem;
+  grid-template-areas:
+    "header header header"
+    ". content ."
+    "footer footer footer";
+}
+
+.kenyatext {
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 13px;
+  color: #000;
+}
+.africa {
+  font-size: 17px;
+  font-family: sans-serif;
+  font-weight: lighter;
+}
+.our {
+  color: white;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+  margin-left: 12px;
+  margin-top: 13px;
+}
+.header {
+  grid-area: header;
+  background-color: black;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.search {
+  width: 35px;
+  position: absolute;
+  right: 10px;
+}
+.hamburger {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.3rem;
+  margin-left: 1rem;
+}
+.blackboxlink {
+  position: absolute;
+  width: 80px;
+  height: 45px;
+  margin-top: 40px;
+  opacity: 0%;
+}
+.blackkenya {
+  opacity: 00%;
+  position: absolute;
+  margin-top: 100px;
+  height: 176px;
+  width: 300px;
+}
+.blackgreece {
+  opacity: 0%;
+  position: absolute;
+  margin-top: 652px;
+  height: 176px;
+  width: 313px;
+}
+.blackengland {
+  opacity: 00%;
+  position: absolute;
+  margin-top: 376px;
+  height: 176px;
+  width: 313px;
+}
+.blacknetherlands {
+  opacity: 00%;
+  position: absolute;
+  margin-top: 928px;
+  height: 176px;
+  width: 313px;
+}
+.blackchile {
+  opacity: 00%;
+  position: absolute;
+  margin-top: 1204px;
+  height: 176px;
+  width: 313px;
+}
+.blacksweden {
+  opacity: 00%;
+  position: absolute;
+  margin-top: 1480px;
+  height: 176px;
+  width: 313px;
+}
+.blackaustria {
+  opacity: 00%;
+  position: absolute;
+  margin-top: 1756px;
+  height: 176px;
+  width: 313px;
+}
+.blackitaly {
+  opacity: 00%;
+  position: absolute;
+  margin-top: 2032px;
+  height: 176px;
+  width: 313px;
+}
+.blackspain {
+  opacity: 00%;
+  position: absolute;
+  margin-top: 2308px;
+  height: 176px;
+  width: 313px;
+}
+.blackmexico {
+  opacity: 00%;
+  position: absolute;
+  margin-top: 2585px;
+  height: 176px;
+  width: 313px;
+}
+
+.blackkenya:hover {
+  animation-name: hovercountry;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+}
+.blackengland:hover {
+  animation-name: hovercountry;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+}
+.blackgreece:hover {
+  animation-name: hovercountry;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+}
+.blacknetherlands:hover {
+  animation-name: hovercountry;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+}
+.blackchile:hover {
+  animation-name: hovercountry;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+}
+.blacksweden:hover {
+  animation-name: hovercountry;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+}
+.blackaustria:hover {
+  animation-name: hovercountry;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+}
+.blackitaly:hover {
+  animation-name: hovercountry;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+}
+.blackspain:hover {
+  animation-name: hovercountry;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+}
+.blackmexico:hover {
+  animation-name: hovercountry;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+}
+@keyframes hovercountry {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 63%;
+  }
+}
+.kenyaimg {
+  position: relative;
+  height: 176px;
+  width: 300px;
+}
+.englandimg {
+  position: relative;
+  height: 176px;
+  width: auto;
+}
+.greeceimg {
+  position: relative;
+  height: 176px;
+  width: auto;
+}
+.netherlandsimg {
+  position: relative;
+  height: 176px;
+  width: auto;
+}
+.chileimg {
+  position: relative;
+  height: 176px;
+  width: auto;
+}
+.swedenimg {
+  position: relative;
+  height: 176px;
+  width: auto;
+}
+.austriaimg {
+  position: relative;
+  height: 176px;
+  width: auto;
+}
+.italyimg {
+  position: relative;
+  height: 176px;
+  width: auto;
+}
+.spainimg {
+  position: relative;
+  height: 176px;
+  width: auto;
+}
+.mexicoimg {
+  position: relative;
+  height: 176px;
+  width: auto;
+}
+.l1 {
+  height: 176px;
+}
+.l2 {
+  height: 176px;
+}
+.l3 {
+  height: 176px;
+}
+.l4 {
+  height: 176px;
+}
+.l5 {
+  height: 176px;
+}
+.l6 {
+  height: 176px;
+}
+.l7 {
+  height: 176px;
+}
+.l8 {
+  height: 176px;
+}
+.l9 {
+  height: 176px;
+}
+.l10 {
+  height: 176px;
+}
+.info1 {
+  height: 176px;
+}
+.info2 {
+  height: 176px;
+}
+.info3 {
+  height: 176px;
+}
+.info4 {
+  height: 176px;
+}
+.info5 {
+  height: 176px;
+}
+.info6 {
+  height: 176px;
+}
+.info7 {
+  height: 176px;
+}
+.info8 {
+  height: 176px;
+}
+.info9 {
+  height: 176px;
+}
+.info10 {
+  height: 176px;
+}
+.choose1 {
+  height: 176px;
+}
+.choose2 {
+  height: 176px;
+}
+.choose3 {
+  height: 176px;
+}
+.choose4 {
+  height: 176px;
+}
+.choose5 {
+  height: 176px;
+}
+.choose6 {
+  height: 176px;
+}
+.choose7 {
+  height: 176px;
+}
+.choose8 {
+  height: 176px;
+}
+.choose9 {
+  height: 176px;
+}
+.choose10 {
+  height: 176px;
+}
+.images {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  padding-top: 100px;
+}
+.headlines {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  padding-top: 20px;
+}
+.kenyainfo {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  font-size: 14px;
+  font-family: sans-serif;
+  font-weight: lighter;
+  padding-top: 85px;
+  padding-left: 330px;
+  width: 300px;
+}
+.kenyainfo2 {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  width: 300px;
+  font-size: 14px;
+  font-family: sans-serif;
+  font-weight: bold;
+  left: 55vw;
+}
+/*https://www.w3schools.com/howto/howto_css_style_hr.asp*/
+.line1 {
+  position: absolute;
+  border-top: 1px solid #000000;
+  width: 90vw;
+  margin-top: 290px;
+}
+.line2 {
+  position: absolute;
+  border-top: 1px solid #000000;
+  width: 90vw;
+  margin-top: 566px;
+}
+.line2 {
+  position: absolute;
+  border-top: 1px solid #000000;
+  width: 90vw;
+  margin-top: 566px;
+}
+.line3 {
+  position: absolute;
+  border-top: 1px solid #000000;
+  width: 90vw;
+  margin-top: 842px;
+}
+.line4 {
+  position: absolute;
+  border-top: 1px solid #000000;
+  width: 90vw;
+  margin-top: 1118px;
+}
+.line5 {
+  position: absolute;
+  border-top: 1px solid #000000;
+  width: 90vw;
+  margin-top: 1394px;
+}
+.line6 {
+  position: absolute;
+  border-top: 1px solid #000000;
+  width: 90vw;
+  margin-top: 1670px;
+}
+.line7 {
+  position: absolute;
+  border-top: 1px solid #000000;
+  width: 90vw;
+  margin-top: 1946px;
+}
+.line8 {
+  position: absolute;
+  border-top: 1px solid #000000;
+  width: 90vw;
+  margin-top: 2222px;
+}
+.line9 {
+  position: absolute;
+  border-top: 1px solid #000000;
+  width: 90vw;
+  margin-top: 2498px;
+}
+.line10 {
+  position: absolute;
+  border-top: 1px solid #000000;
+  width: 90vw;
+  margin-top: 2774px;
+}
+.content {
+  grid-area: content;
+  background-color: rgb(255, 255, 255);
+}
+
+.footer {
+  grid-area: footer;
+  background-color: rgba(207, 207, 207);
+}
+.contact {
+  margin-left: 10px;
+}
+@media only screen and (max-width: 1700px) {
+  .discover {
+    margin-top: 27vh;
+  }
+}
+@media only screen and (max-width: 1500px) {
+  .discover {
+    margin-top: 25vh;
+  }
+}
+@media only screen and (max-width: 1400px) {
+  .discover {
+    margin-top: 23vh;
+    font-size: 50px;
+  }
+}
+@media only screen and (max-width: 1250px) {
+  .discover {
+    margin-top: 20vh;
+    font-size: 50px;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .discover {
+    margin-top: 15vh;
+    font-size: 40px;
+  }
+}
+@media only screen and (max-width: 750px) {
+  .discover {
+    margin-top: 10vh;
+    font-size: 30px;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .discover {
+    margin-top: 9vh;
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 1145px) {
+  .kenyainfo2 {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    width: 300px;
+    font-size: 14px;
+    font-family: sans-serif;
+    font-weight: bold;
+    left: 330px;
+    top: 200px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .kenyatext {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 13px;
+    padding-top: 13px;
+  }
+  .kenyainfo {
+    font-size: 12px;
+  }
+  .kenyainfo2 {
+    font-size: 12px;
+  }
+  .blackboxlink {
+    position: absolute;
+    width: 60px;
+    height: 45px;
+    margin-top: 47px;
+    opacity: 0%;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .kenyatext {
+  }
+  .kenyainfo {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    font-family: sans-serif;
+    font-weight: lighter;
+    padding-top: 90px;
+    padding-left: 50vw;
+    width: 250px;
+    font-size: 11px;
+  }
+  .kenyainfo2 {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    width: 250px;
+    font-family: sans-serif;
+    font-weight: bold;
+    left: 50vw;
+    font-size: 11px;
+  }
+  .images {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 127px;
+    padding-top: 100px;
+    left: 6vw;
+  }
+  .kenyaimg {
+    width: 250px;
+    height: auto;
+  }
+  .englandimg {
+    position: relative;
+    height: auto;
+    width: 250px;
+  }
+  .greeceimg {
+    position: relative;
+    height: auto;
+    width: 250px;
+  }
+  .netherlandsimg {
+    position: relative;
+    height: auto;
+    width: 250px;
+  }
+  .chileimg {
+    position: relative;
+    height: auto;
+    width: 250px;
+  }
+  .swedenimg {
+    position: relative;
+    height: auto;
+    width: 250px;
+  }
+  .austriaimg {
+    position: relative;
+    height: 150px;
+    width: auto;
+  }
+  .italyimg {
+    position: relative;
+    height: auto;
+    width: 250px;
+  }
+  .spainimg {
+    position: relative;
+    height: auto;
+    width: 250px;
+  }
+  .mexicoimg {
+    position: relative;
+    height: auto;
+    width: 250px;
+  }
+  .blackkenya {
+    opacity: 00%;
+    position: absolute;
+    margin-top: 100px;
+    height: 148px;
+    width: 250px;
+  }
+  .blackgreece {
+    opacity: 0%;
+    position: absolute;
+    margin-top: 660px;
+    height: 155px;
+    width: 251px;
+  }
+  .blackengland {
+    opacity: 00%;
+    position: absolute;
+    margin-top: 376px;
+    height: 155px;
+    width: 250px;
+  }
+  .blacknetherlands {
+    opacity: 00%;
+    position: absolute;
+    margin-top: 942px;
+    height: 142px;
+    width: 251px;
+  }
+  .blackchile {
+    opacity: 00%;
+    position: absolute;
+    margin-top: 1210px;
+    height: 167px;
+    width: 250px;
+  }
+  .blacksweden {
+    opacity: 00%;
+    position: absolute;
+    margin-top: 1504px;
+    height: 155px;
+    width: 250px;
+  }
+  .blackaustria {
+    opacity: 00%;
+    position: absolute;
+    margin-top: 1788px;
+    height: 150px;
+    width: 250px;
+  }
+  .blackitaly {
+    opacity: 00%;
+    position: absolute;
+    margin-top: 2064px;
+    height: 141px;
+    width: 251px;
+  }
+  .blackspain {
+    opacity: 00%;
+    position: absolute;
+    margin-top: 2332px;
+    height: 140px;
+    width: 250px;
+  }
+  .blackmexico {
+    opacity: 00%;
+    position: absolute;
+    margin-top: 2599px;
+    height: 157px;
+    width: 250px;
+  }
+}
+@media only screen and (max-width: 570px) {
+  .kenyatext {
+  }
+  .kenyainfo {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    font-family: sans-serif;
+    font-weight: lighter;
+    justify-content: center;
+    width: 200px;
+    font-size: 10px;
+  }
+  .kenyainfo2 {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 110px;
+    width: 200px;
+    font-family: sans-serif;
+    font-weight: bold;
+    margin-right: 13vw;
+    top: 26vh;
+    font-size: 10px;
+  }
+  .images {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 157px;
+  }
+  .kenyaimg {
+    width: 200px;
+    height: auto;
+  }
+  .englandimg {
+    position: relative;
+    height: auto;
+    width: 200px;
+  }
+  .greeceimg {
+    position: relative;
+    height: auto;
+    width: 200px;
+  }
+  .netherlandsimg {
+    position: relative;
+    height: auto;
+    width: 200px;
+  }
+  .chileimg {
+    position: relative;
+    height: auto;
+    width: 200px;
+  }
+  .swedenimg {
+    position: relative;
+    height: auto;
+    width: 200px;
+  }
+  .austriaimg {
+    position: relative;
+    height: 100px;
+    width: auto;
+  }
+  .italyimg {
+    position: relative;
+    height: auto;
+    width: 200px;
+  }
+  .spainimg {
+    position: relative;
+    height: auto;
+    width: 200px;
+  }
+  .mexicoimg {
+    position: relative;
+    height: auto;
+    width: 200px;
+  }
+  .blackkenya {
+    opacity: 00%;
+    position: absolute;
+    margin-top: 100px;
+    height: 118px;
+    width: 201px;
+  }
+  .blackgreece {
+    opacity: 0%;
+    position: absolute;
+    margin-top: 657px;
+    height: 125px;
+    width: 200px;
+  }
+  .blackengland {
+    opacity: 00%;
+    position: absolute;
+    margin-top: 376px;
+    height: 125px;
+    width: 200px;
+  }
+  .blacknetherlands {
+    opacity: 00%;
+    position: absolute;
+    margin-top: 940px;
+    height: 113px;
+    width: 200px;
+  }
+  .blackchile {
+    opacity: 00%;
+    position: absolute;
+    margin-top: 1210px;
+    height: 134px;
+    width: 200px;
+  }
+  .blacksweden {
+    opacity: 00%;
+    position: absolute;
+    margin-top: 1500px;
+    height: 125px;
+    width: 200px;
+  }
+  .blackaustria {
+    opacity: 00%;
+    position: absolute;
+    margin-top: 1782px;
+    height: 100px;
+    width: 200px;
+  }
+  .blackitaly {
+    opacity: 00%;
+    position: absolute;
+    margin-top: 2039px;
+    height: 112px;
+    width: 200px;
+  }
+  .blackspain {
+    opacity: 00%;
+    position: absolute;
+    margin-top: 2309px;
+    height: 112px;
+    width: 200px;
+  }
+  .blackmexico {
+    opacity: 00%;
+    position: absolute;
+    margin-top: 2580px;
+    height: 123px;
+    width: 200px;
+  }
+}
